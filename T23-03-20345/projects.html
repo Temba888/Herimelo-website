@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Herimelo Temba's Web Projects Portfolio" />
+  <meta name="keywords" content="projects, portfolio, HTML, CSS, JavaScript" />
+  <meta name="author" content="Herimelo Temba" />
+  <title>Projects | Herimelo Temba</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Herimelo Temba</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">Toggle heme</button>
+  </header>
+
+  <main>
+    <h2>My Projects</h2>
+    <section class="projects-grid">
+      <!-- Project 1 -->
+      <article class="project-card">
+        <img src="images/OIP.png" alt="Screenshot of Project One" />
+       <div id="project1" class="project-details">
+  <p><strong>Title:</strong> A Comparative Study of Business Performance Between Physical and Hybrid Student Entrepreneurs at UDOM</p>
+
+  <p><strong>Description:</strong> This study compares how student businesses perform when run physically versus using both physical and online methods.</p>
+
+  <p><strong>Findings:</strong> Hybrid businesses reach more customers and earn more, but need digital skills. Physical businesses are easier to manage but limited by location.</p>
+
+  <p><strong>Tools Used:</strong> Google Forms, Excel</p>
+
+  <!-- Optional video -->
+  <div class="video-container">
+   <iframe src="https://www.youtube.com/embed/z-dz6PykbHo" frameborder="0" allowfullscreen></iframe>
+
+  </div>
+</div>
+
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <img src="images/project2.jpg" alt="Screenshot of Project Two" />
+        <h3>Project Two</h3>
+        <button aria-expanded="false" aria-controls="p2" onclick="toggleDetails('p2', this)">Show Details</button>
+        <p id="p2" class="project-details" hidden>
+         Project 2 is still in progress. Stay tuned! <a href="#" target="_blank" rel="noopener">GitHub Report</a>
+        </p>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <img src="images/project3.jpg" alt="Screenshot of Project Three" />
+        <h3>Project Three</h3>
+        <button aria-expanded="false" aria-controls="p3" onclick="toggleDetails('p3', this)">Show Details</button>
+        <p id="p3" class="project-details" hidden>
+         Project 2 is still in progress. Stay tuned! <a href="#" target="_blank" rel="noopener">Live Demo</a>
+        </p>
+      </article>
+
+      <h2>Demo Video</h2>
+      <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/pC5l5j2u9SQ" 
+      title="Hybrid Business Models Explained" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+    
+
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Herimelo Temba</p>
+  </footer>
+
+  <script>
+    function toggleDetails(id, btn) {
+      const details = document.getElementById(id);
+      const isHidden = details.hasAttribute('hidden');
+      if (isHidden) {
+        details.removeAttribute('hidden');
+        btn.textContent = 'Hide Details';
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        details.setAttribute('hidden', '');
+        btn.textContent = 'Show Details';
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+  </script>
+   <script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light-blue') {
+      body.classList.add('light-blue-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light-blue-mode');
+      localStorage.setItem(
+        'theme',
+        body.classList.contains('light-blue-mode') ? 'light-blue' : 'light'
+      );
+    });
+  </script>
+</body>
+</html>

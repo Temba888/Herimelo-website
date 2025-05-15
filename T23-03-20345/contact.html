@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Herimelo Temba" />
+  <meta name="keywords" content="contact, email, web developer" />
+  <meta name="author" content="Herimelo Temba" />
+  <title>Contact | Herimelo Temba</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Herimelo Temba</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">Toggle Theme</button>
+  </header>
+
+  <main>
+    <div class="centered-section">
+      <section class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Have a question or want to work together? Send me a message!</p>
+
+        <form action="#" method="post" class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Herimelo Temba | <a href="mailto:herimelo@example.com">Email Me</a></p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light-blue') {
+      body.classList.add('light-blue-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light-blue-mode');
+      localStorage.setItem(
+        'theme',
+        body.classList.contains('light-blue-mode') ? 'light-blue' : 'light'
+      );
+    });
+  </script>
+</body>
+</html>

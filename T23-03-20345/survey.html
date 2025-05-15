@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Survey | Herimelo Temba" />
+  <meta name="keywords" content="survey, feedback, web development" />
+  <meta name="author" content="Herimelo Temba" />
+  <title>Survey | Herimelo Temba</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Herimelo Temba</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html" aria-current="page">Survey</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">Toggle Theme</button>
+  </header>
+
+  <main>
+    <div class="centered-section">
+      <section class="survey-section">
+        <h2>Feedback Survey</h2>
+        <p>Help me improve by answering the following questions.</p>
+
+        <form action="#" method="post" class="survey-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label>How did you find my portfolio?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="source" value="search" required /> Search Engine</label>
+            <label><input type="radio" name="source" value="social" /> Social Media</label>
+            <label><input type="radio" name="source" value="friend" /> Friend</label>
+          </div>
+
+          <label>Which skills impressed you the most?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="skills" value="html" /> HTML</label>
+            <label><input type="checkbox" name="skills" value="css" /> CSS</label>
+            <label><input type="checkbox" name="skills" value="js" /> JavaScript</label>
+          </div>
+
+          <label for="comments">Any comments or suggestions?</label>
+          <textarea id="comments" name="comments" rows="4"></textarea>
+
+          <button type="submit">Submit Survey</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Herimelo Temba | <a href="mailto:herimelo@example.com">Email Me</a></p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light-blue') {
+      body.classList.add('light-blue-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light-blue-mode');
+      localStorage.setItem(
+        'theme',
+        body.classList.contains('light-blue-mode') ? 'light-blue' : 'light'
+      );
+    });
+  </script>
+</body>
+</html>

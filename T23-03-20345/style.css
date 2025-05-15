@@ -1,0 +1,241 @@
+/* Global Styling */
+body {
+  background-color: #f7f7f7; /* Soft light gray background */
+  font-family: 'Arial', sans-serif;
+  color: #333333; /* Charcoal gray for text */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  background-color: #003366; /* Navy Blue for header */
+  color: #05b8f4; /* White text */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: #FF6F61; /* Light Coral on hover */
+}
+
+/* Theme Toggle Button */
+button#themeToggle {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #008C8C; /* Teal color for toggle button */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button#themeToggle:hover {
+  background-color: #006666; /* Darker Teal on hover */
+}
+
+/* Project Cards Section */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.project-card {
+  background-color: #ffffff; /* White background for project cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e1e8f0;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-card h3 {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  color: #003366; /* Navy Blue text for titles */
+}
+
+.project-card button {
+  background-color: #008C8C; /* Teal color for button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.project-card button:hover {
+  background-color: #006666; /* Darker Teal on hover */
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-details {
+  font-size: 0.95rem;
+  margin-top: 15px;
+  color: #555;
+}
+
+.project-details a {
+  color: #FF6F61; /* Light Coral for links */
+}
+
+.project-details a:hover {
+  text-decoration: underline;
+}
+
+/* Demo Video Section */
+.demo-video-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.demo-video-container iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid #e1e8f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+  background-color: #003366; /* Navy Blue footer */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+/* Light Blue Mode Styles */
+body.light-blue-mode {
+  background-color: #7fbad6; /* Light blue background */
+  color: #333; /* Dark text for readability */
+}
+
+/* Light Blue Mode Header */
+body.light-blue-mode header {
+  background-color: #0e3541; /* Lighter blue header */
+}
+
+/* Light Blue Mode Toggle Button */
+body.light-blue-mode #themeToggle {
+  background-color: #0a3259; /* Light blue button */
+}
+
+body.light-blue-mode #themeToggle:hover {
+  background-color: #06294d; /* Darker blue on hover */
+}
+
+/* Light Blue Mode Footer */
+body.light-blue-mode footer {
+  background-color: #063544; /* Lighter blue footer */
+}
+
+.survey-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* adds spacing between elements */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Common button styling for both buttons */
+button {
+  background-color: #007BFF;  /* Blue background */
+  color: white;               /* White text */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Change background color on hover */
+button:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
+}
+
+#greeting {
+  color: rgb(10, 59, 78);
+}

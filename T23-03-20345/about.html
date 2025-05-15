@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="About Herimelo Temba - Web Developer" />
+  <meta name="keywords" content="About Me, skills, education, web developer" />
+  <meta name="author" content="Herimelo Temba" />
+  <title>About Me | Herimelo Temba</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <style>
+    /* Inline styling to match project card look - can move to style.css */
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .about-card {
+      background-color: #fafafa;
+      border: 1px solid #ddd;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 2rem;
+    }
+    .about-card h2 {
+      color: #0077cc;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .about-intro {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+    .section-title {
+      color: #005fa3;
+      margin-top: 1.5rem;
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 0.3rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+    ul ul {
+      margin-left: 1rem;
+      list-style-type: circle;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Herimelo Temba</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="survey.html">Survey</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle">Toggle Theme</button>
+</header>
+
+<main>
+  <article class="about-card">
+    <h2>About Me</h2>
+    <p class="about-intro">Hi, I’m Herimelo Temba, a web developer who loves making websites that are easy to use and look great. I focus on front-end development and enjoy learning new tools and technologies.</p>
+
+    <h3 class="section-title">Skills</h3>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>Responsive Web Design</li>
+      <li>Git & GitHub</li>
+      <li>Frameworks
+        <ul>
+          <li>React</li>
+          <li>Bootstrap</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 class="section-title">Education</h3>
+    <ol>
+      <li>Ubungo Primary School 2016</li>
+      <li>Uru secondary School 2020</li>
+      <li>Advanced level at Iyunga 2023</li>
+      <li>Current available at UNIVERSITY OF DODOMA</li>
+    </ol>
+
+    <h3 class="section-title">Interests</h3>
+    <ul>
+      <li>Open Source Contribution</li>
+      <li>Analysis of New emerged Systems</li>
+      <li>Staying Update with New Technologies</li>
+    </ul>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Herimelo Temba | <a href="mailto:herimelo@example.com">Email Me</a></p>
+</footer>
+
+ <script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light-blue') {
+      body.classList.add('light-blue-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light-blue-mode');
+      localStorage.setItem(
+        'theme',
+        body.classList.contains('light-blue-mode') ? 'light-blue' : 'light'
+      );
+    });
+  </script>
+
+</body>
+</html>

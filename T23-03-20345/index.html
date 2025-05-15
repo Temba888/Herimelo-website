@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of Herimelo Temba, web developer." />
+  <meta name="keywords" content="portfolio, web developer, HTML, CSS, JavaScript" />
+  <meta name="author" content="Herimelo Temba" />
+  <title>Herimelo Temba | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <style>
+    /* Unified global layout */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #05b8f4; /* Light white for name */
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+    }
+
+    nav a[href*="about.html"]:hover,
+    nav a[href*="projects.html"]:hover,
+    nav a[href*="contact.html"]:hover,
+    nav a[href*="survey.html"]:hover {
+      color: #FF6F61; /* Light blue hover for specific links */
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #0077cc;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    ul.social-links {
+      list-style: none;
+      padding: 0;
+      display: inline-flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    ul.social-links li a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    ul.social-links li a:hover {
+      color: #61a8ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #003366;
+      color: #fff;
+    }
+
+    #themeToggle {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #008C8C;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    #themeToggle:hover {
+      background-color: #006666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Herimelo Temba</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle">Toggle Theme</button>
+  </header>
+
+  <h2 id="greeting">Welcome!</h2>
+
+
+  <main>
+    <section>
+      <h2>Welcome to My Portfolio</h2>
+      <p>
+        Hello! I'm <strong>Herimelo Temba</strong>, a web developer.<br />
+        Explore my work, learn more about me, and feel free to get in touch!
+      </p>
+      <img src="images/herimelo.png" alt="Photo of Herimelo Temba" width="200" style="border-radius: 8px;" />
+    </section>
+
+    <section>
+      <h2>Find Me Online</h2>
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/Temba888" target="_blank" rel="noopener noreferrer">
+            <img src="images/github.png" alt="GitHub" width="32" /> GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/herimelo-temba-241072366" target="_blank" rel="noopener noreferrer">
+            <img src="images/linkedin.png" alt="LinkedIn" width="32" /> LinkedIn
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Herimelo Temba | <a href="mailto:herimelo@example.com" style="color: #61a8ff;">Email Me</a></p>
+  </footer>
+   <script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light-blue') {
+      body.classList.add('light-blue-mode');
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light-blue-mode');
+      localStorage.setItem(
+        'theme',
+        body.classList.contains('light-blue-mode') ? 'light-blue' : 'light'
+      );
+    });
+  </script>
+</body>
+</html>
